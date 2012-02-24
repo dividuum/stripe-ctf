@@ -1,0 +1,33 @@
+Level1:
+    Setting PATH to /tmp, getting level01 to execute /tmp/date
+    level01@ctf6:/tmp$ /levels/level01 
+    Current time: kxlVXUvzv
+
+Level2:
+    Setting user_details cookie to ../../home/level03/.password.
+    Wrote the required header into a text file and sent it using
+    curl (after seeing that the default chrome webinspector doesn't
+    allow cookie editing).
+    level3: Or0m4UX07b
+
+Level3:
+    Using negative arguments to access the copied string on the stack.
+    Got the address of run using objdump.
+    level4: i5cBbPvPCpcP
+
+Level4:
+    Stack smashing using too long input (which includes the shellcode
+    and a landing zone of NOPs. The problem here is the stack
+    randomization. I had to use some bruteforcing here.
+    level5: fzfDGnSmd317
+
+Level5:
+    Use faulty job parser to get pickle to execute code using os.system.
+    level6: SF2w8qU1QDj
+
+Level6:
+    Timing attack on two strlens (O^2). using the race 
+    between character checking and the child process writing
+    Haha. Eleminating impossible passwords by counting the
+    dots before the Haha.
+    the-flag: theflagl0eFTtT5oi0nOTxO5
