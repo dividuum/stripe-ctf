@@ -542,7 +542,7 @@ to count the number of dots before the program taunts you. Fortunately
 there is a way to slow down the program: There a two strlen functions executed
 for every character check: the strlen used in the for condition and the
 strlen in the char_at function. Combined this means that the complexity of
-each loop is O^2 with regard to the guess size. We just have to provide a
+each loop is O(n^2) with regard to the guess size. We just have to provide a
 very large guess to slow the program down! The maximum size of the guess 
 argument is MAX_ARG_STRLEN (around 130000 bytes).
 
@@ -561,7 +561,7 @@ all possible seconds characters.
 
 By doing so, we slowly extract the correct password.
 
-level06@ctf5:/tmp/tmp.q55uR6zRsw$ cat ex.py 
+    level06@ctf5:/tmp/tmp.q55uR6zRsw$ cat ex.py 
     import os, pickle
     num_forks = 0
     def test(guess):
